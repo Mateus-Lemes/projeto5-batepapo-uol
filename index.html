@@ -12,6 +12,7 @@
     <title>Bate-Papo Uol</title>
 </head>
 <body>
+    <div class="shadowbox hidden" onclick="startMenu()"></div>
     <header>
         <img src="arquivos/logo1.png" alt="Logo do Bate-papo uol">
         <button onclick="startMenu()"><ion-icon name="people-sharp"></ion-icon></button>
@@ -56,7 +57,7 @@
 
     <footer>
         <input type="text" placeholder="Escreva aqui...">
-        <ion-icon name="paper-plane-outline"></ion-icon>
+        <ion-icon data-identifier="send-message" onclick="sendMessage()" name="paper-plane-outline"></ion-icon>
     </footer>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

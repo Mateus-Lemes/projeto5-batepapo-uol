@@ -7,6 +7,14 @@ body {
     display: flex;
 }
 
+.shadowbox {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    position: fixed;
+}
+
 /* cabeçalho */
 
 header {
@@ -16,6 +24,7 @@ header {
     top: 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
     z-index: 3;
+    background-color: #ffffff;
 }
 
 header img {
@@ -50,13 +59,15 @@ main {
 main div {
     background-color: #ffffff;
     width: 100%;
-    height: 40px;
     margin-bottom: 4px;
-    line-height: 40px;
+    line-height: 20px;
 }
 
 main div p {
     margin-top: 5px;
+    word-break:normal;
+    word-wrap: break-word;
+    padding: 15px 0 15px 7px;
 }
 
 .reserved {
@@ -73,9 +84,10 @@ aside {
     height: 100%;
     position: fixed;
     right: 0;
-    z-index: 3;
+    z-index: 6;
     width: 259px;
     background: #FFFFFF;
+    box-shadow: 5px 0 20px 20px rgb(44, 44, 44);
 }
 
 .hidden {
@@ -115,6 +127,7 @@ menu button ion-icon {
 }
 
 menu button p {
+    font-size: 16px;
     margin-left: 8px;
     height: 36px;
     line-height: 21px;
@@ -143,6 +156,12 @@ footer input {
     font-style: italic;
     border: 0;
     margin-left: 17px;
+    width: 90%;
+}
+
+footer input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
 }
 
 footer input::placeholder {
