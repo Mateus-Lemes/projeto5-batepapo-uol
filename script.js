@@ -8,13 +8,7 @@ let objectSendMessage = {};
 
 
 const promise = axios.post("https://mock-api.driven.com.br/api/v4/uol/participants", nameSent);
-    promise.then(done);
     promise.catch(failed);
-
-
-function done(see) {
-    console.log(see.status);
-}
 
 function failed(fail) {
     if (fail.response.status == 400) {
@@ -23,22 +17,16 @@ function failed(fail) {
             name: name
         }
         const promise = axios.post("https://mock-api.driven.com.br/api/v4/uol/participants", nameSent);
-        promise.then(done);
         promise.catch(failed);
     }
 }
 
 
-
-
 function onOff() {
     const promise = axios.post("https://mock-api.driven.com.br/api/v4/uol/status", nameSent);
-    promise.then(done);
     promise.catch(failed);
 }
 setInterval (onOff, 5000);
-
-
 
 
 const promiseMessages = axios.get("https://mock-api.driven.com.br/api/v4/uol/messages");
@@ -50,7 +38,6 @@ function takeMessages(promise){
     messages = promise.data;
     messages.forEach(showMessages);
 }
-
 
 
 function showMessages(object) {
@@ -83,7 +70,6 @@ function reloadMessages() {
     promiseMessages.then(takeMessages);
 }
 setInterval (reloadMessages, 3000);
-
 
 
 function sendMessage() {
